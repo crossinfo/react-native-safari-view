@@ -49,7 +49,7 @@ RCT_EXPORT_METHOD(show:(NSDictionary *)args resolver:(RCTPromiseResolveBlock)res
     // Initialize the Safari View
     _safariView = [[SFSafariViewController alloc] initWithURL:url entersReaderIfAvailable:readerMode];
     _safariView.delegate = self;
-    [self.safariView performSelector:@selector(_setShowingLinkPreview:) withObject:@(YES)];
+    [_safariView performSelector:@selector(_setShowingLinkPreview:) withObject:@(YES)];
 
     // Set tintColor if available
     if (tintColorString) {
